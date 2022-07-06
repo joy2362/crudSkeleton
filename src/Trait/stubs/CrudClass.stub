@@ -2,6 +2,7 @@
 
 namespace $NAMESPACE$;
 //@dev: abdullah zahid joy
+//crud skeleton for $CLASS_NAME$
 
 use Joy2362\CrudSkeleton\Interface\CrudOperation;
 use App\Models\$CLASS_NAME$;
