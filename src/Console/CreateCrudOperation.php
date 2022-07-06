@@ -16,7 +16,7 @@ class CreateCrudOperation extends Command
 
     protected $hidden = true;
 
-    protected $signature = 'create:CrudOperation {name}';
+    protected $signature = 'make:crud {name}';
 
     /**
      * Create a new command instance.
