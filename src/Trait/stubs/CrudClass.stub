@@ -1,0 +1,33 @@
+<?php
+
+namespace $NAMESPACE$;
+//@dev: abdullah zahid joy
+
+use Joy2362\CrudSkeleton\Interface\CrudOperation;
+use App\Models\$CLASS_NAME$;
+
+class $CLASS_NAME$Operation implements CrudOperation
+{
+    protected $$NAME$ = null;
+
+   public function getAll(){
+        return $CLASS_NAME$::all();
+   }
+
+    public function getById($id){
+         return $CLASS_NAME$::find($id);
+    }
+
+     public function destroy($id){
+        $CLASS_NAME$::destroy($id);
+     }
+
+    public function createOrUpdate( $data ,$id = null ){
+        if(!empty($id)){
+            return $CLASS_NAME$::find($id)->update($data);
+        }else{
+           return $CLASS_NAME$::create($data);
+        }
+    }
+
+}
