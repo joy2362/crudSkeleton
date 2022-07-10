@@ -4,6 +4,7 @@ namespace Joy2362\CrudSkeleton;
 
 use Illuminate\Support\ServiceProvider;
 use Joy2362\CrudSkeleton\Console\CreateCrudOperation;
+use Joy2362\CrudSkeleton\Interface\CrudOperation;
 
 class CrudSkeletonServiceProvider extends ServiceProvider
 {
@@ -15,9 +16,11 @@ class CrudSkeletonServiceProvider extends ServiceProvider
     public function register()
     {
      
-            $this->commands([
-                CreateCrudOperation::class
-            ]);
+         $this->app->singleton(CrudOperation::class,
+         CrudOperation::class);
+        $this->commands([
+            CreateCrudOperation::class
+        ]);
         
     }
 
