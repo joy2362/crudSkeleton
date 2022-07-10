@@ -14,7 +14,7 @@ class CreateCrudOperation extends Command
      */
     protected Filesystem $files;
 
-    protected $hidden = true;
+   // protected $hidden = true;
 
     protected $signature = 'make:crud {name}';
 
