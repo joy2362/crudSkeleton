@@ -16,8 +16,7 @@ class CrudSkeletonServiceProvider extends ServiceProvider
     public function register()
     {
      
-         $this->app->singleton(CrudOperation::class,
-         CrudOperation::class);
+         $this->app->make(CrudOperation::class);
         $this->commands([
             CreateCrudOperation::class
         ]);
